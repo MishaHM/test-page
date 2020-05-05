@@ -1,0 +1,65 @@
+.newsteller {
+
+  .newsteller-info {
+    margin-bottom: 60px;
+
+    .newsteller-info__header {
+      font-size: 30px;
+      font-weight: 600;
+      color: #fff;
+
+      .newsteller-info__header_orange {
+        color: $btn-color;
+      }
+    }
+
+    .newsteller-info__text {
+      color: rgba(255,255,255,.5);
+      line-height: 1.7;
+    }
+  } // newsteller-info
+
+  .newsteller-form {
+    .form-block {
+      position: relative;
+
+      .form-block__input {
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+        padding: 0 20px;
+        font-style: italic;
+        background-color: #fff;
+        column-rule: $black-transparent;
+        border: none;
+      }
+
+      .form-block__btn {
+        height: 50px;
+        padding: 0 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+    } //form-block
+  } // newsteller-form
+} // newsteller
+
+
+@media (min-width: 992px) {
+  .newsteller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .newsteller-info {
+      width: 55%;
+      margin-bottom: 0;
+    }
+
+    .newsteller-form {
+      width: 40%;
+    }
+  } // newsteller
+} //width 992px

@@ -1,0 +1,7 @@
+.active {
+  color: $btn-color;
+
+  &::before {
+    transform: translate(75px, 0);
+  }
+}

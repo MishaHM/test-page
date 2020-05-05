@@ -1,0 +1,16 @@
+.btn {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  background-color: $btn-color;
+  transition: .3s;
+
+  &:hover {
+    background-color: #000;
+  }
+}
+
+.btn_black {
+  background-color: #000;
+}
