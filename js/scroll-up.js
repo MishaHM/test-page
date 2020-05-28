@@ -1,4 +1,4 @@
-let scrollUp = document.getElementById('scroll-up');
+let scrollUp = document.querySelector('.scroll-up');
 
 scrollUp.onclick = function () {
   event.preventDefault();
@@ -7,7 +7,7 @@ scrollUp.onclick = function () {
 
 window.onscroll = function () {
   if (this.pageYOffset >= 100) {
-    scrollUp.style.display = 'block';
+    scrollUp.style.display = 'flex';
   } else {
     scrollUp.style.display = 'none';
   }

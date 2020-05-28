@@ -1,3 +1,16 @@
 .visible {
   left: 0;
-}
+
+  .mobile-nav__toggler-item {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    &::after {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+} // visible

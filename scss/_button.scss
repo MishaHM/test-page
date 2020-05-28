@@ -4,10 +4,15 @@
   color: #fff;
   border: none;
   background-color: $btn-color;
+  cursor: pointer;
   transition: .3s;
 
   &:hover {
     background-color: #000;
+  }
+
+  &:focus {
+    border: 2px solid blue;
   }
 }
 

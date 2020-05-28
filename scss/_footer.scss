@@ -1,81 +1,121 @@
 .footer {
-  .footer-info {
-    margin-bottom: 20px;
+  background-color: #252525;
 
-    .footer-info__link {
-      display: block;
-      width: 200px;
+  .footer-inner {
 
-      .footer-info__img {
-        max-width: 100%;
-        height: auto;
-      }
+    .footer-inner__info {
+      margin-bottom: 20px;
 
-    } // footer-info__link
+      .footer-inner-info-link {
+        display: block;
+        width: 200px;
 
-    .footer-info__text {
-      font-size: 12px;
-      line-height: 1.7;
-      color: rgba(255,255,255,.5);
-    }
-  } // footer-info
-
-  .footer-nav {
-    .footer-nav__toggler {
-      display: block;
-      width: 35px;
-      height: 30px;
-      margin-bottom: 10px;
-    }
-
-    .footer-nav__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      height: 0;
-      overflow: hidden;
-      transition: 2s;
-
-      .footer-nav__item {
-        padding: 10px 0;
-
-        .footer-nav__link {
-          font-size: 14px;
-          font-weight: 400;
-          color: #fff;
-          text-transform: uppercase;
-          text-decoration: none;
+        .footer-inner__info-img {
+          max-width: 100%;
+          height: auto;
         }
+      } // footer-info__link
+
+      .footer-inner__info-about {
+        font-size: 12px;
+        line-height: 1.7;
+        color: rgba(255,255,255,.5);
       }
-    } // footer-nav__list
-  } // footer-nav
+    } // footer-info
+
+    .footer-inner__nav {
+
+      .footer-inner__nav-toggler {
+        display: inline-block;
+        width: 35px;
+        height: 30px;
+        margin-bottom: 10px;
+        padding: 0;
+        position: relative;
+        transition: .5s;
+
+        @keyframes arrow-transform-backwards {
+          0%   {transform: rotate(0deg);}
+          50%  {transform: rotate(90deg);}
+          100% {transform: rotate(180deg);}
+        }
+
+        .footer-inner__nav-arrow {
+          display: block;
+          width: 20px;
+          height: 20px;
+          margin: 0 auto;
+          background-image: url(../img/icons/up-arrow.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          animation: arrow-transform-backwards .3s linear;
+          transform: rotate(180deg);
+        }
+
+        @keyframes arrow-transform {
+          0%   {transform: rotate(180deg);}
+          50%  {transform: rotate(90deg);}
+          100% {transform: rotate(0deg);}
+        }
+
+        .footer-inner__nav-arrow--change {
+          animation: arrow-transform .3s linear;
+          transform: rotate(0deg);
+        }
+
+      } // footer-inner__nav-toggler
+
+      .nav--footer {
+        display: none;
+        transition: 2s;
+
+        .nav__item {
+
+          .nav__link--footer {
+            color: #fff;
+
+            &:hover {
+              color: $btn-color;
+            }
+          }
+        }
+
+      } // nav--footer
+
+      .nav--footer--show {
+        display: block;
+      }
+    } // footer-inner__nav
+  } // footer-inner
 } // footer
 
 
 @media (min-width: 992px) {
   .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    .footer-info {
-      width: 30%;
-      margin-bottom: 0;
-    }
-
-    .footer-nav {
-      width: 50%;
-
-      .footer-nav__toggler {
-        display: none;
+      .footer-inner__info {
+        width: 30%;
+        margin-bottom: 0;
       }
 
-      .footer-nav__list {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        height: auto;
-      } // footer-nav__list
-    } // footer-nav
+      .footer-inner__nav {
+        width: 50%;
+
+        .footer-inner__nav-toggler {
+          display: none;
+        }
+
+        .nav--footer {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+        }
+      } // footer-nav
+    } // footer-inner
   } // footer
 } //width 992px

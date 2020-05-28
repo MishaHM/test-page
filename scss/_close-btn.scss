@@ -1,0 +1,31 @@
+.btn--close {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1501;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: .5s;
+    transform-origin: top left;
+  }
+
+  &::after {
+    transform: rotate(45deg) translate(-50%, -50%);
+  }
+
+  &::before {
+    transform: rotate(-45deg) translate(-50%, -50%);
+  }
+} // search__close
